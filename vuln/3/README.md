@@ -24,6 +24,21 @@ for item in changes:
 #### Исправление
 
 ```python
-todo от @nailgil
+for item in changes:
+    if isFirst:
+        isFirst = False
+    else:
+        sql_query += ", "
+    if item == 'isAdmin':
+        sql_query += "isAdmin = ?"
+        sql_data += (isAdmin,)
+    elif item == 'pw':
+        sql_query += "pw = ?"
+        sql_data += (password1,)
+    elif item == 'name':
+        sql_query += "name = ?"
+        sql_data += (name,)
+    else:
+        log.debug('А это как сюда попало?! [' + str(item) + ']')
 ```
 <sub>[вернуться к Исправлению уязвимостей](../)</sub>
