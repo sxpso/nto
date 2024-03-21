@@ -44,5 +44,5 @@
 - [X] [Уязвимость №3](vuln/3)
 - [X] [Уязвимость №4](vuln/4)
 ### Bad practices
-- [X] [Nginx h2c smuggling](vuln/extra.md)
+- [X] [Nginx h2c smuggling, CORS, Blind SQLi + Mass Assignment, Race Condition](vuln/extra.md)
 
