@@ -38,7 +38,5 @@ for item in changes:
     elif item == 'name':
         sql_query += "name = ?"
         sql_data += (name,)
-    else:
-        log.debug('А это как сюда попало?! [' + str(item) + ']')
 ```
 <sub>[вернуться к Исправлению уязвимостей](../)</sub>
