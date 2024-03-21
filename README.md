@@ -1,3 +1,4 @@
+![img.png](https://raw.githubusercontent.com/sxpso/uwu-writeups/master/2021/%D0%9D%D0%A2%D0%98/img.png)
 # ✨ Отчёт о проделанной работе команды sh4b4sh на инженерном туре НТО по ИБ 2024
 
 ---
