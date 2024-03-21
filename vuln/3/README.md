@@ -1,42 +1,32 @@
 # Уязвимость №3
-## Слепая SQL-иньекция и возможный Mass Assignment
+## Админ может видеть чужие пароли
 
-С правами администратора можно манипулировать запросом для изменения пользователя так, чтобы он вызывал сторонний SQL-код.
-Однако, такой же код содержится и в методе updateLight -- а благодаря [уязвимости №4](../4) у нас получается SQL-иньекция от обычного Пользователя.
+С правами администратора можнозапросить метод getUsers - и он вернет чужие пароли без какого-либо шифрования.
 
 #### Уязвимый код
 ```python
-for item in changes:
-  if isFirst:
-    isFirst = False
-  else:
-    sql_query += ", "
-  sql_query += item + " = ?"
-  if item == 'isAdmin':
-    sql_data += (isAdmin,)
-  elif item == 'pw':
-    sql_data += (password1,)
-  elif item == 'name':
-    sql_data += (name,)
-  else:
-    log.debug('А это как сюда попало?! [' + str(item) + ']')
+cursor = Database().connection.cursor()
+            cursor.execute("SELECT login, isAdmin, pw, name FROM user;")
+            user = None
+            for row in cursor:
+                user = {
+                    'login': row[0],
+                    'isAdmin': bool(row[1]),
+                    'password': row[2],
+                    'name': row[3]
+                }
 ```
 #### Исправление
 
 ```python
-for item in changes:
-    if isFirst:
-        isFirst = False
-    else:
-        sql_query += ", "
-    if item == 'isAdmin':
-        sql_query += "isAdmin = ?"
-        sql_data += (isAdmin,)
-    elif item == 'pw':
-        sql_query += "pw = ?"
-        sql_data += (password1,)
-    elif item == 'name':
-        sql_query += "name = ?"
-        sql_data += (name,)
+cursor = Database().connection.cursor()
+            cursor.execute("SELECT login, isAdmin, name FROM user;")
+            user = None
+            for row in cursor:
+                user = {
+                    'login': row[0],
+                    'isAdmin': bool(row[1]),
+                    'name': row[2]
+                }
 ```
 <sub>[вернуться к Исправлению уязвимостей](../)</sub>
