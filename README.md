@@ -44,5 +44,5 @@
 - [X] [Уязвимость №3](vuln/3)
 - [X] [Уязвимость №4](vuln/4)
 ### Bad practices
-- [X] [Nginx h2c smuggling](vuln/extra)
+- [X] [Nginx h2c smuggling](vuln/extra.md)
 
