@@ -1,2 +1,47 @@
-# nto
-✨ Russian National Technological Olympiad '2024 Information Security writeup of team sh4b4sh
+# ✨ Отчёт о проделанной работе команды sh4b4sh на инженерном туре НТО по ИБ 2024
+
+---
+
+#### Отчет подготовлен командой sh4b4sh в составе:
+- Хужиахметова Ильдара Руслановича
+- Гильмутдинова Наиля Ильдаровича
+- Черкасова Кирилла Константиновича
+- Гулина Кирилла Дмитриевича
+
+----
+
+## Наступательная кибербезопасность
+### Web
+- [x] [web1](ctf/web/web1) (10 очков)
+- [x] [web2](ctf/web/web2) (20 очков)
+- [x] [web3](ctf/web/web3) (30 очков)
+### Crypto
+- [x] [crypto1](ctf/crypto/crypto1) (10 очков)
+- [ ] crypto2 (20 очков)
+- [ ] crypto3 (30 очков)
+### pwn
+- [x] [pwn1](ctf/pwn/pwn1) (10 очков)
+- [x] [pwn2](ctf/pwn/pwn2) (20 очков)
+- [ ] pwn3 (30 очков)
+### rev
+- [x] rev1 (10 очков)
+- [ ] rev2 (20 очков)
+- [ ] rev3 (30 очков)
+
+----
+
+## Расследование инцидента
+- [x] [Машина №1. Windows](foren/uno)
+- [x] [Машина №2. Linux](foren/dos)
+
+----
+## Исправление уязвимостей
+[Обзор предоставленного сервиса](vuln/overview.md)
+### Уязвимости
+- [x] [Уязвимость №1](vuln/bugs/1)
+- [X] [Уязвимость №2](vuln/bugs/2)
+- [X] [Уязвимость №3](vuln/bugs/3)
+- [X] [Уязвимость №4](vuln/bugs/4)
+### Bad practices
+- [X] [Nginx h2c smuggling](vuln/bugs/extra)
+
