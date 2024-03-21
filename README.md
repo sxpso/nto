@@ -39,10 +39,10 @@
 ## Исправление уязвимостей
 [Обзор предоставленного сервиса](vuln/overview.md)
 ### Уязвимости
-- [x] [Уязвимость №1](vuln/bugs/1)
-- [X] [Уязвимость №2](vuln/bugs/2)
-- [X] [Уязвимость №3](vuln/bugs/3)
-- [X] [Уязвимость №4](vuln/bugs/4)
+- [x] [Уязвимость №1](vuln/1)
+- [X] [Уязвимость №2](vuln/2)
+- [X] [Уязвимость №3](vuln/3)
+- [X] [Уязвимость №4](vuln/4)
 ### Bad practices
-- [X] [Nginx h2c smuggling](vuln/bugs/extra)
+- [X] [Nginx h2c smuggling](vuln/extra)
 
