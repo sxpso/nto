@@ -21,6 +21,20 @@ def updateLight(request):
 #### Исправление
 
 ```python
-todo by @nailgil
+def updateLight(request):
+    code = HTTPStatus.OK
+    data, error = auth_api.validateAuthHeader(request)
+    if error:
+        code = HTTPStatus.UNAUTHORIZED
+    else:
+        if not ("isAdmin" in data) or not bool(data["isAdmin"]):
+            error = "Доступ запрещён"
+            code = HTTPStatus.FORBIDDEN
+        id = -1
+        interval = -1
+        status = 0
+        changes = []
+        bad_values = []
+        content = request.get_json()
 ```
 <sub>[вернуться к Исправлению уязвимостей](../)</sub>
