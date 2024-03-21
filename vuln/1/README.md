@@ -16,4 +16,4 @@ else:
 - sql_query = "UPDATE user SET pw = '" + str(new_password) + "' WHERE login = '" + str(username) + "';"
 + cursor.execute("UPDATE user SET pw = ? WHERE login = ?;", (new_password, username))
 ```
-<sub>[вернуться к Исправлению уязвимостей](../../)</sub>
+<sub>[вернуться к Исправлению уязвимостей](../)</sub>
